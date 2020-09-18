@@ -61,4 +61,5 @@ def make_turn(message):
     gf.make_ai_turn(user_id, board, ai)
 
 
-bot.polling(none_stop=True, interval=0)
+if __name__ == "__main__":
+    bot.polling(none_stop=True, interval=0)
