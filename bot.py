@@ -47,13 +47,13 @@ def make_turn(message):
         bot.send_message(user_id, text.start_new_game_text)
         return
 
-    cords = gf.get_correct_turn_command(message.text.split(), board)
+    coords = gf.get_correct_turn_command(message.text.split(), board)
 
-    if cords is None:
+    if coords is None:
         bot.send_message(user_id, text.bad_move_text)
         return
 
-    board = board.do_move(cords[0], cords[1])
+    board = board.do_move(coords[0], coords[1])
     if board.is_game_finished:
         gf.finish_game(user_id, board)
         return
