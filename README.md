@@ -1,1 +1,1 @@
-# gomoku_bot
+# Gomoku bot for Telegram
